@@ -1,5 +1,7 @@
 ---
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 const pageTitle = "我的Astro学习博客";
 ---
@@ -13,9 +15,10 @@ const pageTitle = "我的Astro学习博客";
     <title>{pageTitle}</title>
   </head>
 <body>
-    <a href="/">首页</a>
-    <a href="/about/">关于</a>
-    <a href="/blog/">博客</a>
+    <Header />
+    <script>
+      import "../scripts/menu.js";
+    </script>
     <h1>{pageTitle}</h1>
     <p>随着教程不断深入，我会将我更多的obsidian笔记发布在这里。</p>
     <p>也许有一天，我真的能成为一名出色的高级前端工程师呢</p>
@@ -24,5 +27,6 @@ const pageTitle = "我的Astro学习博客";
       <li><a href="/posts/post-2/">文章 2</a></li>
       <li><a href="/posts/post-3/">文章 3</a></li>
     </ul>
+    <Footer />
 </body>
 </html>
